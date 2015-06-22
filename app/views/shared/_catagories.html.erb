@@ -1,0 +1,26 @@
+<div class="side_links">
+  <%= link_to "Latest_post", posts_path %></br>
+  <%= link_to "Archives", archives_path %></br>
+  <%= link_to "About", about_path %></br>
+  <%= link_to 'Resume', resume_path %>
+
+   <% if session[:user_id] %>
+      <p class="user_name">Logged in | 
+      <%= link_to 'Log Out', logout_path %>
+      <br>
+      <%= link_to 'New Post', new_post_path %></p>
+      <%= link_to 'Private Posts', "#" %>
+    <% end -%>
+</div>
+
+<h2>Catagories</h2>
+<% if logged_in? %>
+  <%= link_to "Add New Catagory", new_catagory_path, :class => "small" %>
+<% end -%>
+<hr>
+<% @catagories.each do |c| %>
+  <h3><%= c.name %><span class="small"> (<%= c.posts.count %>)</span></h3>
+  <% c.posts.each do |catagory_post| %>
+    <p><%= link_to catagory_post.title, post_path(catagory_post) %></p>
+  <% end -%>
+<% end -%>

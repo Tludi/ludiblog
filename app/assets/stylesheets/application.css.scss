@@ -1,0 +1,334 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+ @import "bootstrap";
+
+html, body, .mainBody, .content {
+    height: 100%;
+}
+.mainBody, .content {
+    position: relative;
+}
+
+body {
+  background-color: #4B7399;
+  font-family: Verdana, Helvetica, Arial;
+  font-size: 14px;
+}
+
+a img {
+  border: none;
+}
+
+a {
+  color: #0000FF;
+}
+
+.clear {
+  clear: both;
+  height: 0;
+  overflow: hidden;
+}
+
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -50px; /* same as the footer */
+}
+
+/*#container {
+  width: 75%;
+  margin: 0 auto;
+  background-color: #FFF;
+  padding: 20px 40px;
+  border: solid 1px black;
+  margin-top: 20px;
+}*/
+
+#flash_notice, #flash_error, #flash_alert {
+  padding: 5px 8px;
+  margin: 10px 0;
+}
+
+#flash_notice {
+  background-color: #CFC;
+  border: solid 1px #6C6;
+}
+
+#flash_error, #flash_alert {
+  background-color: #FCC;
+  border: solid 1px #C66;
+}
+
+.fieldWithErrors {
+  display: inline;
+}
+
+.error_messages {
+  width: 400px;
+  border: 2px solid #CF0000;
+  padding: 0px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  font-size: 12px;
+}
+
+.error_messages h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 10px;
+  font-size: 12px;
+  margin: 0;
+  background-color: #c00;
+  color: #fff;
+}
+
+.error_messages p {
+  margin: 8px 10px;
+}
+
+.error_messages ul {
+  margin: 0;
+}
+
+.logo {
+ float:left;
+ margin-left: -40px;
+}
+
+.footer {
+  position: relative;
+}
+
+.footer .content {
+  height:40px;
+}
+
+.footer .content p{
+  margin-left:20px;
+}
+
+.ftext {
+ vertical-align:-12px;
+}
+
+.dagreen {
+  color: green;
+}
+
+.dablue {
+  color: blue;
+}
+
+
+
+/* below is from the scaffold file */
+body { 
+  background-color: #fff; 
+  color: #333;
+  margin:0;
+  padding:0;
+ }
+
+body, p, ol, ul, td {
+  font-family: Ubuntu, verdana, arial, helvetica, sans-serif;
+  /*line-height: 20px;*/
+}
+
+pre {
+  background-color: #eee;
+  font-family: Ubuntu, verdana, arial, helvetica, sans-serif;
+    line-height: 12px;
+}
+
+hr {
+  border-color:#fff;
+}
+
+a {
+  color:#999;
+  /*text-decoration:none;*/
+  
+}
+
+a:hover { color: #333; background-color:#fff; }
+
+a.no_link_style { text-decoration: none;}
+
+a.no_link_style:hover { 
+  color:#777;
+  background-color:#f3f3f3;}
+
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+
+#header, .footer {
+  height:80px;
+  background-color:#f3f3f3;
+  border-bottom:solid 1px  #d2d2d2;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+#header .content {
+  width:850px;
+}
+
+#header .content p {
+  width:150px;
+  float:right; 
+}
+
+.mainBody {
+  width:100%;
+  position: absolute;
+  top: 80px;
+  bottom: 80px;
+}
+
+.content {
+  /*background-color:yellow;*/
+  width: 850px;
+  margin: auto;
+}
+
+.content h2.logo_text {
+  width:400px;
+  color:#aaa;
+  text-shadow: #cdcdce 5px 5px 1px;
+  float:left;
+  margin-top:25px;
+  font-size:2.5em;
+}
+
+.content .primary{
+  width:600px;
+  padding-right:20px;
+  float:left;
+  display:inline;
+  border-right:solid #e3e3e3 1px;
+  font-size:1.1em;
+  line-height: 25px;
+}
+
+.content .primary .post {
+  padding-top:20px;
+}
+
+.content .primary .post a, .small {
+  font-size:.8em;
+  color:#aaa;
+}
+
+.content .primary .post h1 a {
+  color:#333;
+}
+
+.primary p img {
+  float:right;
+  clear:left;
+  margin-left:10px;
+  border:2px solid #999;
+  
+}
+
+.content .secondary {
+  float:right;
+  width:190px;
+  display:inline;
+  padding:4px;
+}
+
+.code_block {
+  /*background-color:#aeaeae;
+  color:#222;
+  padding:10px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  text-shadow: #e8e8e8 1px 1px 1px;
+  border-top:#666 solid 2px;
+  border-left:#666 solid 2px;
+  border-bottom:#eee solid 2px;
+  border-right:#eee solid 2px;*/
+  background-color:#e3e3e4;
+  padding: 10px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+}
+
+.post_form {
+  width:600px;
+  margin:auto;
+}
+
+.modify_links {
+  font-size:1em;
+  color:#ddd;
+}
+
+.side_links {
+  margin:40px 0;
+  line-height: 25px;
+}
+/****** Error Styles *******/
+
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+#small {
+  font-size: 35%;
+  color:#aaa;
+}
+
+
+

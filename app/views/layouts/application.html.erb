@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <title>tim ludi | diligent agility</title>
+  <%= stylesheet_link_tag "application" %>
+  <%= javascript_include_tag "application" %>
+ 
+  <%= csrf_meta_tag %>
+  <meta name="google-site-verification" content="EBkUy32w-fMiHusd35EcdJSDQ6F2IqDhxbbXMmg0W-U" />
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19547350-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+  </script>
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+</head>
+
+<body>
+  <%= render '/shared/header' %>
+  <div class="mainBody">
+    <div class="content">
+      <div class="wrapper">
+      
+        <%= yield %>
+      </div>
+    </div>
+  </div>
+
+  <%= render '/shared/footer' %>
+</body>
+</html>
