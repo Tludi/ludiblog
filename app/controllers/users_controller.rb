@@ -15,11 +15,7 @@ class UsersController < ApplicationController
   # GET /users/new
   def new
     @user = User.new
-    if current_user
-      @current_user = current_user
-    else
-      @current_user = "missing"
-    end
+
   end
 
   # GET /users/1/edit
