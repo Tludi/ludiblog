@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
-  before_action :set_categories, only: [:index, :show]
+  before_action :set_categories
 
   # GET /posts
   # GET /posts.json
@@ -32,7 +32,8 @@ class PostsController < ApplicationController
   # POST /posts.json
   def create
     @user = User.find(session[:user_id])
-    @post = @user.posts.new(params[:post])
+    @post = @user.posts.build(post_params) # use build with nested models
+    # @post = @user.posts.new(params[:post])
 
     respond_to do |format|
       if @post.save

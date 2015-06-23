@@ -4,7 +4,8 @@ class User < ActiveRecord::Base
   before_save :prepare_password
 
   has_many :posts
-
+  accepts_nested_attributes_for :posts
+  
   validates_presence_of :name
   validates_uniqueness_of :name, :email, :allow_blank => true
   # validates_format_of :name, :with => /^[-\w\._@]+$/i, :allow_blank => true, :message => "should only contain letters, numbers, or .-_@"
