@@ -1,29 +1,37 @@
-<p id="notice"><%= notice %></p>
+<div class="primary">
+  <div class="post card_post_wrapper">
+    <div class="card_post">
+      <div class="card_body">
+        <h2 class="card_title"><%= @post.title %>
+          <% unless @post.status == 0  %>
+            <span id="small"> (Private Post)</span>
+          <% end -%>
+        </h2>
+        <hr>
+        <span class="small">
+          <% if session[:user_id] %>
+            <%= link_to ' Edit ', edit_post_path(@post)  %>
+            <%= link_to '| Delete', @post, :confirm => 'Are you sure?', :method => :delete %>
+          <% end -%>
+        </span>
+   
+        <p class="small"><%= @post.created_at.strftime("%B %d, %Y")
+  %></p>
+        <%= simple_format @post.body %>
 
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
+        <% if session[:user_id] %>
+          <%= link_to ' Edit ', edit_post_path(@post)  %>
+          <%= link_to '| Delete', @post, :confirm => 'Are you sure?', :method => :delete %>
+        <% end -%>
+        <br />
+        <hr />
+      </div>
+    </div>
+  </div>
+  <!-- link_to "Previous Posts", archives_path %> -->
+</div> <!-- end primary div -->
 
-<p>
-  <strong>Body:</strong>
-  <%= @post.body %>
-</p>
 
-<p>
-  <strong>Category:</strong>
-  <%= @post.category_id %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @post.user_id %>
-</p>
-
-<p>
-  <strong>Status:</strong>
-  <%= @post.status %>
-</p>
-
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+<div class="secondary">
+  <%= render "shared/categories" %>
+</div>
