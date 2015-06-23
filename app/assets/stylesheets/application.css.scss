@@ -132,7 +132,9 @@ a {
   color: blue;
 }
 
-
+.center {
+  text-align: center;
+}
 
 /* below is from the scaffold file */
 body { 
@@ -224,7 +226,7 @@ div.field, div.actions {
   padding-right:20px;
   float:left;
   display:inline;
-  border-right:solid #e3e3e3 1px;
+  /*border-right:solid #e3e3e3 1px;*/
   font-size:1.1em;
   line-height: 25px;
 }
@@ -273,6 +275,7 @@ div.field, div.actions {
   -moz-border-radius: 15px;
   border-radius: 15px;
 }
+
 
 .post_form {
   width:600px;
