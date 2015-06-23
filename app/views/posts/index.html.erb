@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<div class="primary">
+   <div class="card_post_wrapper">
+    <div class="card_post">
+      <div class="card_body">
+      <h2 class="card_title"><%= @current_public_post.title %></h2>
+      <hr>
+        <span class="small">
+          <% if session[:user_id] %>
+            <%= link_to ' Edit ', edit_post_path(@current_public_post)  %>
+            <%= link_to '| Delete', @current_public_post, :confirm => 'Are you sure?', :method => :delete %>
+          <% end -%>
+        </span>
+     
+        <p class="small"><%= @current_public_post.created_at.strftime("%B %d, %Y")
+    %></p>
+        <%= simple_format @current_public_post.body %>
+
+        <% if session[:user_id] %>
+          <%= link_to ' Edit ', edit_post_path(@current_public_post)  %>
+          <%= link_to '| Delete', @current_public_post, :confirm => 'Are you sure?', :method => :delete %>
+        <% end -%>
+        <br />
+        <hr />
+    
+      </div>
+    </div>
+  </div>
+</div> <!-- end primary div -->
+
+
+<div class="secondary">
+  <h4>future categories</h4>
+  <!-- categories go here -->
+  <%= render "shared/categories" %>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
