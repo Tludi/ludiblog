@@ -1,41 +1,53 @@
 <p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8">
 
-<div class="primary">
-   <div class="card_post_wrapper">
-    <div class="card_post">
-      <div class="card_body">
-      <h2 class="card_title"><%= @current_public_post.title %></h2>
-      <hr>
-        <span class="small">
-          <% if session[:user_id] %>
-            <%= link_to ' Edit ', edit_post_path(@current_public_post)  %>
-            <%= link_to '| Delete', @current_public_post, :confirm => 'Are you sure?', :method => :delete %>
-          <% end -%>
-        </span>
-     
-        <p class="small"><%= @current_public_post.created_at.strftime("%B %d, %Y")
-    %></p>
-        <%= simple_format @current_public_post.body %>
+      <div class="blog-header">
+        <h1 class="blog-title">The Bootstrap Blog</h1>
+        <p class="lead blog-description">The official example template of creating a blog with Bootstrap.</p>
+      </div>
+      <% @posts.each do |p| %>
+        <div class="primary">
+           <div class="card_post_wrapper">
+            <div class="card_post">
+              <div class="card_body">
+              <h2 class="card_title"><%= link_to p.title, post_path(p) %></h2>
+              <h5>(<%= p.category.name %>)</h5>
+              <hr>
+                <span class="small">
+                  <% if session[:user_id] %>
+                    <%= link_to ' Edit ', edit_post_path(p)  %>
+                    <%= link_to '| Delete', p, :confirm => 'Are you sure?', :method => :delete %>
+                  <% end -%>
+                </span>
+             
+                <p class="small"><%= p.created_at.strftime("%B %d, %Y")
+            %></p>
+                <%= simple_format p.body %>
 
-        <% if session[:user_id] %>
-          <%= link_to ' Edit ', edit_post_path(@current_public_post)  %>
-          <%= link_to '| Delete', @current_public_post, :confirm => 'Are you sure?', :method => :delete %>
-        <% end -%>
-        <br />
-        <hr />
-    
+                <% if session[:user_id] %>
+                  <%= link_to ' Edit ', edit_post_path(p)  %>
+                  <%= link_to '| Delete', p, :confirm => 'Are you sure?', :method => :delete %>
+                <% end -%>
+                <br />
+                <hr />
+            
+              </div>
+            </div>
+          </div>
+        </div> <!-- end primary div -->
+      <% end -%>
+    </div>
+ 
+    <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+      <div class="secondary">
+        <!-- categories go here -->
+        <%= render "shared/categories" %>
       </div>
     </div>
-  </div>
-</div> <!-- end primary div -->
-
-
-<div class="secondary">
-  <!-- categories go here -->
-  <%= render "shared/categories" %>
+ </div>    
 </div>
-
-
 
 
 

@@ -18,7 +18,7 @@
 <% end -%>
 <hr>
 <% @categories.each do |c| %>
-  <h3><%= c.name %><span class="small"> (<%= c.posts.count %>)</span></h3>
+  <h3><%= c.name %> <span class="badge"><%= c.posts.count %></span></h3>
   <% c.posts.each do |category_post| %>
     <p><%= link_to category_post.title, post_path(category_post) %></p>
   <% end -%>
