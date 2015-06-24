@@ -29,7 +29,7 @@
    
         <p class="small"><%= @post.created_at.strftime("%B %d, %Y")
   %></p>
-        <%= simple_format @post.body %>
+        <%= @post.body.html_safe %>
 
         <% if session[:user_id] %>
           <%= link_to ' Edit ', edit_post_path(@post)  %>

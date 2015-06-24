@@ -6,8 +6,8 @@ gem 'rails', '4.2.2'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
-gem 'bootstrap-sass', '~> 3.3.5'
+gem 'sass-rails', github: 'rails/sass-rails'
+gem 'bootstrap-sass', '~> 3.3.1'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
@@ -24,6 +24,8 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'sprockets-rails'
+gem 'ckeditor'
+gem 'paperclip'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -45,4 +47,4 @@ group :development, :test do
 end
 
 gem "bcrypt", :require => "bcrypt"
-
+gem 'autoprefixer-rails'

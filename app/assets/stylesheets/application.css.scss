@@ -11,6 +11,8 @@
  */
  @import "bootstrap-sprockets";
  @import "bootstrap";
+ /*@import "default";*/
+ /*@import "school_book";*/
 
 html, body, .mainBody, .content {
     height: 100%;
@@ -20,7 +22,8 @@ html, body, .mainBody, .content {
 }
 
 body {
-  background-color: #4B7399;
+  /*background-color: #4B7399;*/
+  /*background-color: #FBF4E1;*/
   font-family: Verdana, Helvetica, Arial;
   font-size: 14px;
 }
@@ -54,6 +57,28 @@ a {
   border: solid 1px black;
   margin-top: 20px;
 }*/
+
+.navbar {
+  background-color: #4B7399;
+  min-height: 50px;
+  /*padding-top: 12px*/
+  /*background-color: #FBF4E1;*/
+  
+}
+.navbar-brand {
+  font-size: 2em;
+  line-height: 1.42857143;
+}
+.navbar-default .navbar-brand,
+.navbar-default .navbar-nav > li > a {
+  color: #eee;
+}
+
+a img.navbar-brand {
+  width: 75px;
+  height: 75px;
+  padding: 10px;
+}
 
 #flash_notice, #flash_error, #flash_alert {
   padding: 5px 8px;
@@ -141,12 +166,12 @@ a {
 }
 
 /* below is from the scaffold file */
-body { 
+/*body { 
   background-color: #fff; 
   color: #333;
   margin:0;
   padding:0;
- }
+ }*/
 
 body, p, ol, ul, td {
   font-family: Ubuntu, verdana, arial, helvetica, sans-serif;
@@ -160,7 +185,7 @@ pre {
 }
 
 hr {
-  border-color:purple;
+  /*border-color:purple;*/
 }
 
 a {
@@ -346,11 +371,12 @@ a.logo_text {
 
 .card_post{
   background:#fff;
-  border: solid 1px #ddd;
-  margin-top:30px;
+  /*background-color: #FBF4E1;*/
+  /*border: solid 1px #ddd;*/
+  /*margin:10px;*/
   margin-right: 10px;
   padding:20px;
-  box-shadow: 10px 10px 20px #bbb;
+  /*box-shadow: 6px 6px 20px #ccc;*/
 }
 
 h2.card_title a, .card_title{
