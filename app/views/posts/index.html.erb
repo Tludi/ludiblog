@@ -13,7 +13,7 @@
             <div class="card_post">
               <div class="card_body">
               <h2 class="card_title"><%= link_to p.title, post_path(p) %></h2>
-              <h5>(<%= p.category.name %>)</h5>
+              <h5 class="small">(<%= p.category.name %>)</h5>
               <hr>
                 <span class="small">
                   <% if session[:user_id] %>
