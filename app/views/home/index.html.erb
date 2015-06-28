@@ -1,40 +1,61 @@
-<div class="jumbotron">
+
+<div class="jumbotron white-bg">
   <div class="container">
-    <h1>Hello, world!</h1>
-    <p>...</p>
-    <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
-  </div><!-- end main container -->
+    <%= image_tag "blogfeature.png", :width => 1080, :height => 280, :class => "img-responsive center-block" %>
+  </div>
 </div>
 
+  <!-- Column for each category -->
+<!-- <div class="jumbotron"> -->
 <div class="container">
-      <!-- Column for each category -->
-      <div class="row">
-        <% @categories.each do |c| %>
-          <div class="col-md-3 card_post">
-            <h2><%= c.name%></h2>
-            <ul>
-            <% @posts.each do |p| %>
-              <% if p.category == c %>
-                <li><%= link_to p.title, post_path(p) %></li>
-              <% end -%>
-            <% end -%>
-            </ul>
-            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-          </div>
+  <div class="row center-block">
+    <% @categories.each do |c| %>
+      <div class="col-md-4 card_post feature_card_post panel panel-primary">
+        <div class="panel-heading"><%= c.name%></div>
+        <div class="panel-body">
+        <ul>
+        <% @posts.each do |p| %>
+          <% if p.category == c %>
+            <li><%= link_to p.title, post_path(p) %></li>
+          <% end -%>
         <% end -%>
-        <div class="col-md-3">
-          <h2>Archives</h2>
-          <ul>
-            <% @posts.each do |p| %>
-              <li><%= link_to p.title, post_path(p) %></li>
-            <% end -%>
-          </ul>
+        </ul>
+        <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
         </div>
       </div>
+    <% end -%>
+  </div>
+</div>
+<!-- </div> -->
 
-      <hr>
+<!-- header bar for recent posts -->
+<div class="recent_posts_header">
+  <div class="recent_posts_header_text center-block">
+    <h3>Recent Posts</h3>
+  </div>
+</div>
 
-      <footer>
-        <p>&copy; Company 2015</p>
-      </footer>
-    </div> <!-- /container -->
+<!-- list of recent posts -->
+<div class="jumbotron recent_posts">
+  <div class="container ">
+    <% @posts.each do |p| %>
+      <div class="post card_post_wrapper center-block">
+        <div class="card_post panel panel-success recent_card_post">
+          <div class="recent_body panel-heading">
+            <h2 class="recent_title "><%= p.title %></h2>
+          </div>
+          <div class="panel-body">
+            <span class="small"><%= p.created_at.strftime("%B %d, %Y") %></span>
+            <%= simple_format p.featuretext %> <span><%= link_to " (Read more...)", post_path(p) %></span>
+          </div>
+        </div>
+      </div>
+    <% end -%>
+  </div>
+</div>
+
+<hr>
+
+  <footer>
+    <p>&copy; Company 2015</p>
+  </footer>

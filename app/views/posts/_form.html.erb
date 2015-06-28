@@ -20,6 +20,10 @@
     <%= f.cktext_area :body, :size => "100x50" %>
   </div>
   <div class="field">
+    <%= f.label :feature_text %><br>
+    <%= f.cktext_area :featuretext, :size => "100x20" %>
+  </div>
+  <div class="field">
     <%= f.label :category_id %><br>
     <%= f.select(:category_id, Category.all.collect {|c|
          [c.name, c.id]} , {:prompt => "select (nothing yet)"}) %>
