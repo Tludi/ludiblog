@@ -1,61 +1,93 @@
-
-<div class="jumbotron white-bg">
+<!-- ******PROMO****** --> 
+<section id="promo" class="promo section offset-header has-pattern">
   <div class="container">
-    <%= image_tag "blogfeature.png", :width => 1080, :height => 280, :class => "img-responsive center-block" %>
-  </div>
-</div>
+    <div class="row">
+      <div class="overview col-md-12 col-sm-12 col-xs-12">
+        <%= image_tag "blogfeature.png", :width => 1080, :height => 280, :class => "img-responsive center-block" %>        
+      </div><!--//overview-->                                           
+    </div><!--//row-->
+  </div><!--//container-->
+</section><!--//promo-->
 
-  <!-- Column for each category -->
-<!-- <div class="jumbotron"> -->
-<div class="container">
-  <div class="row center-block">
-    <% @categories.each do |c| %>
-      <div class="col-md-4 card_post feature_card_post panel panel-primary">
-        <div class="panel-heading"><%= c.name%></div>
-        <div class="panel-body">
-        <ul>
-        <% @posts.each do |p| %>
-          <% if p.category == c %>
-            <li><%= link_to p.title, post_path(p) %></li>
-          <% end -%>
-        <% end -%>
-        </ul>
-        <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div>
-      </div>
-    <% end -%>
-  </div>
-</div>
-<!-- </div> -->
 
-<!-- header bar for recent posts -->
-<div class="recent_posts_header">
-  <div class="recent_posts_header_text center-block">
-    <h3>Recent Posts</h3>
-  </div>
-</div>
-
-<!-- list of recent posts -->
-<div class="jumbotron recent_posts">
-  <div class="container ">
-    <% @posts.each do |p| %>
-      <div class="post card_post_wrapper center-block">
-        <div class="card_post panel panel-success recent_card_post">
-          <div class="recent_body panel-heading">
-            <h2 class="recent_title "><%= p.title %></h2>
-          </div>
-          <div class="panel-body">
-            <span class="small"><%= p.created_at.strftime("%B %d, %Y") %></span>
-            <%= simple_format p.featuretext %> <span><%= link_to " (Read more...)", post_path(p) %></span>
-          </div>
-        </div>
-      </div>
-    <% end -%>
-  </div>
-</div>
-
-<hr>
-
-  <footer>
-    <p>&copy; Company 2015</p>
-  </footer>
+<!-- ******FEATURES****** --> 
+<section id="features" class="features section">
+    <div class="container">
+        <div class="row">
+            <h2 class="title text-center sr-only">Features</h2>
+            <div class="item col-md-3 col-sm-6 col-xs-12 text-center">
+                <div class="icon">
+                    <i class="fa fa-diamond"></i>                
+                </div><!--//icon-->
+                <div class="content">
+                    <h3 class="title">Ruby Class and Instance Methods</h3>
+                    <p>Outline an app feature/benefit here. You can change the icon above to any of the 500+ <a href="http://fortawesome.github.io/Font-Awesome/icons/" target="_blank">FontAwesome icons</a> available. </p>  
+                    <button class="modal-trigger btn btn-link" data-toggle="modal" data-target="#feature-modal-1">Find out more</button>
+                </div><!--//content-->               
+            </div><!--//item-->
+            <div class="item col-md-3 col-sm-6 col-xs-12 text-center">
+                <div class="icon">
+                    <i class="fa fa-git"></i>                
+                </div><!--//icon-->
+                <div class="content">
+                    <h3 class="title">App Feature Two</h3>
+                    <p>Outline an app feature/benefit here. You can change the icon above to any of the 500+ <a href="http://fortawesome.github.io/Font-Awesome/icons/" target="_blank">FontAwesome icons</a> available. </p>   
+                    <button class="modal-trigger btn btn-link" data-toggle="modal" data-target="#feature-modal-1">Find out more</button>
+                </div><!--//content-->               
+            </div><!--//item-->
+            <div class="item col-md-3 col-sm-6 col-xs-12 text-center">
+                <div class="icon">
+                    <i class="fa fa-code"></i>                
+                </div><!--//icon-->
+                <div class="content">
+                    <h3 class="title">App Feature Three</h3>
+                    <p>Outline an app feature/benefit here. You can change the icon above to any of the 500+ <a href="http://fortawesome.github.io/Font-Awesome/icons/" target="_blank">FontAwesome icons</a> available. </p> 
+                    <button class="modal-trigger btn btn-link" data-toggle="modal" data-target="#feature-modal-1">Find out more</button>  
+                </div><!--//content-->               
+            </div><!--//item-->
+            <div class="item col-md-3 col-sm-6 col-xs-12 text-center">
+                <div class="icon">
+                    <i class="fa fa-map-marker"></i>                
+                </div><!--//icon-->
+                <div class="content">
+                    <h3 class="title">App Feature Four</h3>
+                    <p>Outline an app feature/benefit here. You can change the icon above to any of the 500+ <a href="http://fortawesome.github.io/Font-Awesome/icons/" target="_blank">FontAwesome icons</a> available. </p>   
+                    <button class="modal-trigger btn btn-link" data-toggle="modal" data-target="#feature-modal-1">Find out more</button>
+                </div><!--//content-->               
+            </div><!--//item-->
+        </div><!--//row-->
+        
+        <div class="row feature-row-last">
+            <div class="item col-md-4 col-sm-6 col-xs-12 text-center">
+                <div class="icon">
+                    <i class="fa fa-calendar"></i>                
+                </div><!--//icon-->
+                <div class="content">
+                    <h3 class="title">App Feature One</h3>
+                    <p>Outline an app feature/benefit here. You can change the icon above to any of the 500+ <a href="http://fortawesome.github.io/Font-Awesome/icons/" target="_blank">FontAwesome icons</a> available. </p>  
+                    <button class="modal-trigger btn btn-link" data-toggle="modal" data-target="#feature-modal-1">Find out more</button>
+                </div><!--//content-->               
+            </div><!--//item-->
+            <div class="item col-md-4 col-sm-6 col-xs-12 text-center">
+                <div class="icon">
+                    <i class="fa fa-comments"></i>                
+                </div><!--//icon-->
+                <div class="content">
+                    <h3 class="title">App Feature Two</h3>
+                    <p>Outline an app feature/benefit. You can change the icon above to any of the 500+ <a href="http://fortawesome.github.io/Font-Awesome/icons/" target="_blank">FontAwesome icons</a> available. </p>  
+                    <button class="modal-trigger btn btn-link" data-toggle="modal" data-target="#feature-modal-1">Find out more</button>
+                </div><!--//content-->               
+            </div><!--//item-->
+            <div class="item col-md-4 col-sm-6 col-xs-12 text-center">
+                <div class="icon">
+                    <i class="fa fa-globe"></i>
+                </div><!--//icon-->
+                <div class="content">
+                    <h3 class="title">App Feature Three</h3>
+                    <p>Outline an app feature/benefit here. You can change the icon above to any of the 500+ <a href="http://fortawesome.github.io/Font-Awesome/icons/" target="_blank">FontAwesome icons</a> available. </p> 
+                    <button class="modal-trigger btn btn-link" data-toggle="modal" data-target="#feature-modal-1">Find out more</button>  
+                </div><!--//content-->               
+            </div><!--//item-->
+        </div><!--//row-->
+    </div><!--//container-->
+</section><!--//features-->

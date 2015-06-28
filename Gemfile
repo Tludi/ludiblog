@@ -26,6 +26,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'sprockets-rails'
 gem 'ckeditor'
 gem 'paperclip'
+gem 'font-awesome-rails'
 
 # gem 'gist-embed-rails'
 # Use ActiveModel has_secure_password

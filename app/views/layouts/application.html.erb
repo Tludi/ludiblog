@@ -1,8 +1,11 @@
 <!DOCTYPE html>
-<html lang='en'>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]--> 
 <head>
   
   <title>tim ludi | diligent agility</title>
+  
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
 
@@ -26,7 +29,7 @@
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
 </head>
 
-<body>
+<body data-spy="scroll">
   
   <%= render '/shared/header' %>
 <!--   <div class="mainBody">
