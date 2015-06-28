@@ -27,15 +27,15 @@ jQuery(document).ready(function($) {
     });
 
     /* ======= jQuery Placeholder ======= */
-    $('input, textarea').placeholder();
+    // $('input, textarea').placeholder();
     
     /* ======= jQuery FitVids - Responsive Video ======= */
-    $("#video-container").fitVids();    
+    // $("#video-container").fitVids();    
     
     /* ======= jQuery Responsive equal heights plugin ======= */
     /* Ref: https://github.com/liabru/jquery-match-height */
     
-    $('#testimonials .quote-box').matchHeight(); 
+    // $('#testimonials .quote-box').matchHeight(); 
     
     /* ======= Style Switcher (Remove on production site) ======= */
     $('#config-trigger').on('click', function(e) {

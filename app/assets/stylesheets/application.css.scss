@@ -13,14 +13,14 @@
  @import "bootstrap";
  @import "styles";
  @import "font-awesome";
+ @import "animate";
+ @import "flexslider";
 
- /*@import "default";*/
- /*@import "school_book";*/
 
-html, body, .mainBody, .content {
+html, body, .mainBody {
     height: 100%;
 }
-.mainBody, .content {
+.mainBody {
     position: relative;
 }
 
@@ -52,109 +52,9 @@ a {
     margin: 0 auto -50px; /* same as the footer */
 }
 
-/*#container {
-  width: 75%;
-  margin: 0 auto;
-  background-color: #FFF;
-  padding: 20px 40px;
-  border: solid 1px black;
-  margin-top: 20px;
-}*/
-
-.navbar {
-  background-color: #4B7399;
-  /*background-color: #8b88ff;*/
-  min-height: 50px;
-  /*padding-top: 12px*/
-  /*background-color: #FBF4E1;*/
-  
-}
-.navbar-brand {
-  font-size: 2em;
-  line-height: 1.42857143;
-}
-.navbar-default .navbar-brand,
-.navbar-default .navbar-nav > li > a {
-  color: #eee;
-}
-
-a img.navbar-brand {
-  width: 75px;
-  height: 75px;
-  padding: 10px;
-}
-
-#flash_notice, #flash_error, #flash_alert {
-  padding: 5px 8px;
-  margin: 10px 0;
-}
-
-#flash_notice {
-  background-color: #CFC;
-  border: solid 1px #6C6;
-}
-
-#flash_error, #flash_alert {
-  background-color: #FCC;
-  border: solid 1px #C66;
-}
-
-.fieldWithErrors {
-  display: inline;
-}
-
-.error_messages {
-  width: 400px;
-  border: 2px solid #CF0000;
-  padding: 0px;
-  padding-bottom: 12px;
-  margin-bottom: 20px;
-  background-color: #f0f0f0;
-  font-size: 12px;
-}
-
-.error_messages h2 {
-  text-align: left;
-  font-weight: bold;
-  padding: 5px 10px;
-  font-size: 12px;
-  margin: 0;
-  background-color: #c00;
-  color: #fff;
-}
-
-.error_messages p {
-  margin: 8px 10px;
-}
-
-.error_messages ul {
-  margin: 0;
-}
-
 .category-box{
   border: solid 1px #e3e3e3;
   margin-right: 5px;
-}
-
-.logo {
- float:left;
- margin-left: -40px;
-}
-
-.footer {
-  position: relative;
-}
-
-.footer .content {
-  height:40px;
-}
-
-.footer .content p{
-  margin-left:20px;
-}
-
-.ftext {
- vertical-align:-12px;
 }
 
 .dagreen {
@@ -169,13 +69,6 @@ a img.navbar-brand {
   text-align: center;
 }
 
-/* below is from the scaffold file */
-/*body { 
-  background-color: #fff; 
-  color: #333;
-  margin:0;
-  padding:0;
- }*/
 
 body, p, ol, ul, td {
   font-family: Ubuntu, verdana, arial, helvetica, sans-serif;
@@ -188,9 +81,6 @@ pre {
     line-height: 12px;
 }
 
-hr {
-  /*border-color:purple;*/
-}
 
 a {
   color:#999;
@@ -211,27 +101,6 @@ div.field, div.actions {
 }
 
 
-#header, .footer {
-  height:80px;
-  background-color:#f3f3f3;
-  border-bottom:solid 1px  #d2d2d2;
-}
-
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
-
-#header .content {
-  width:850px;
-}
-
-#header .content p {
-  width:150px;
-  float:right; 
-}
-
 .mainBody {
   width:100%;
   position: absolute;
@@ -239,12 +108,6 @@ div.field, div.actions {
   bottom: 80px;
 }
 
-.content {
-  /*background-color:yellow;*/
-  width: 850px;
-  width: 900px;
-  margin: auto;
-}
 
 a.logo_text {
   width:400px;
@@ -362,6 +225,53 @@ a.logo_text {
   list-style: square;
 }
 
+#flash_notice, #flash_error, #flash_alert {
+  padding: 5px 8px;
+  margin: 10px 0;
+}
+
+#flash_notice {
+  background-color: #CFC;
+  border: solid 1px #6C6;
+}
+
+#flash_error, #flash_alert {
+  background-color: #FCC;
+  border: solid 1px #C66;
+}
+
+.fieldWithErrors {
+  display: inline;
+}
+
+.error_messages {
+  width: 400px;
+  border: 2px solid #CF0000;
+  padding: 0px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  font-size: 12px;
+}
+
+.error_messages h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 10px;
+  font-size: 12px;
+  margin: 0;
+  background-color: #c00;
+  color: #fff;
+}
+
+.error_messages p {
+  margin: 8px 10px;
+}
+
+.error_messages ul {
+  margin: 0;
+}
+
 #small {
   font-size: 35%;
   color:#aaa;
@@ -406,31 +316,4 @@ h2.card_title a, .card_title{
 
 .white-bg {
   background-color: #fff;
-}
-
-div.recent_posts {
-  background-color: #D6F1EF;
-
-}
-
-.recent_posts_header {
-  height: 90px;
-  background-color: #9AD0CC;
-}
-
-.recent_posts_header_text {
-  max-width: 1080px;
-}
-
-.recent_posts_header_text h3 {
-  padding-top: 30px;
-}
-
-.recent_card_post {
-  padding:0;
-  
-}
-
-.recent_title{
-  font-size: 1.5em;
 }
