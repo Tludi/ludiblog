@@ -190,8 +190,9 @@ a.logo_text {
 }
 /****** Error Styles *******/
 
-#notice {
+p#notice {
   color: green;
+  padding_top: 80px;
 }
 
 .field_with_errors {

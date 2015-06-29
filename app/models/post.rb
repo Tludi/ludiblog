@@ -1,5 +1,5 @@
 class Post < ActiveRecord::Base
-
+  scope :latest, -> {order(date: :asc, time: :asc)}
   #default_scope {where('created_at DESC')}
   belongs_to :category
   belongs_to :user

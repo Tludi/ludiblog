@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
-<div class="container">
+<!-- <section id="promo" class="promo section offset-header has-pattern"> -->
+<div class="container offset-header">
   <div class="row">
     <div class="col-sm-8">
 
@@ -8,47 +9,49 @@
         <p class="lead blog-description">The official example template of creating a blog with Bootstrap.</p>
       </div>
 
+      <div class="primary">
+        <div class="post card_post_wrapper">
+          <div class="card_post">
+            <div class="card_body">
+              <h2 class="card_title"><%= @post.title %>
+                <% unless @post.status == 0  %>
+                  <span id="small"> (Private Post)</span>
+                <% end -%>
+              </h2>
+              <hr>
+              <span class="small">
+                <% if session[:user_id] %>
+                  <%= link_to ' Edit ', edit_post_path(@post)  %>
+                  <%= link_to '| Delete', @post, :confirm => 'Are you sure?', :method => :delete %>
+                <% end -%>
+              </span>
+         
+              <p class="small"><%= @post.created_at.strftime("%B %d, %Y")
+        %></p>
+              <%= @post.body.html_safe %>
 
+              <% if session[:user_id] %>
+                <%= link_to ' Edit ', edit_post_path(@post)  %>
+                <%= link_to '| Delete', @post, :confirm => 'Are you sure?', :method => :delete %>
+              <% end -%>
+              <br />
+              <hr />
+            </div>
+          </div>
+        </div>
+        <!-- link_to "Previous Posts", archives_path %> -->
+      </div> <!-- end primary div -->
 
-<div class="primary">
-  <div class="post card_post_wrapper">
-    <div class="card_post">
-      <div class="card_body">
-        <h2 class="card_title"><%= @post.title %>
-          <% unless @post.status == 0  %>
-            <span id="small"> (Private Post)</span>
-          <% end -%>
-        </h2>
-        <hr>
-        <span class="small">
-          <% if session[:user_id] %>
-            <%= link_to ' Edit ', edit_post_path(@post)  %>
-            <%= link_to '| Delete', @post, :confirm => 'Are you sure?', :method => :delete %>
-          <% end -%>
-        </span>
-   
-        <p class="small"><%= @post.created_at.strftime("%B %d, %Y")
-  %></p>
-        <%= @post.body.html_safe %>
+    </div> <!-- end col-8 div -->
 
-        <% if session[:user_id] %>
-          <%= link_to ' Edit ', edit_post_path(@post)  %>
-          <%= link_to '| Delete', @post, :confirm => 'Are you sure?', :method => :delete %>
-        <% end -%>
-        <br />
-        <hr />
-      </div>
-    </div>
-  </div>
-  <!-- link_to "Previous Posts", archives_path %> -->
-</div> <!-- end primary div -->
-
-</div>
  
     <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
-<div class="secondary">
-  <%= render "shared/categories" %>
-</div>
-   </div>
- </div>    
-</div>
+      <div class="secondary">
+        <%= render "shared/categories" %>
+      </div>
+    </div>
+
+  </div>  <!-- end row div -->
+  
+</div> <!-- end container div -->
+<!-- </section> -->
