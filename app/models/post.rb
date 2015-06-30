@@ -1,6 +1,6 @@
 class Post < ActiveRecord::Base
-  scope :latest, -> {order(date: :asc, time: :asc)}
-  #default_scope {where('created_at DESC')}
+  # default_scope {where('created_at DESC')}
+  scope :latest, -> {order(:updated_at => :desc)}
   belongs_to :category
   belongs_to :user
   #belongs_to :archive

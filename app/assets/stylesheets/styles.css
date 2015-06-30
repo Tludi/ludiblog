@@ -879,8 +879,39 @@ select {
 }
 .faq .item .question .fa {
   margin-right: 10px;
+  padding-top: 4px;
   color: #7bcaab;
 }
+
+.category h3 .icon_small .fa {
+  margin-right: 5px;
+  padding-top: 4px;
+  /*padding-left: 1px;*/
+  color: #7bcaab;
+  font-size: .8em;
+}
+
+.icon_small i {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #7bcaab;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  /*display: table;*/
+  /*margin: 0 auto;*/
+  -webkit-transition: -webkit-transform ease-out 0.2s, background 0.3s;
+  -moz-transition: -moz-transform ease-out 0.2s, background 0.3s;
+  transition: transform ease-out 0.2s, background 0.3s;
+}
+
+
 .faq .item .answer {
   color: #777777;
   font-weight: 300;

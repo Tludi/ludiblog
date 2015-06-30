@@ -5,16 +5,19 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
-    # @current_public_post = Post.where("status = '0'").first
+    @posts = Post.all.order(:updated_at => :desc)
+    # @current_public_post = Post.where("status = '0'").last
     if Post.count != 0 
-     @current_public_post = Post.first
+     @current_public_post = Post.last
     end
   end
 
   # GET /posts/1
   # GET /posts/1.json
   def show
+    if Post.count != 0 
+     @current_public_post = Post.last
+    end
   end
 
   # GET /posts/new

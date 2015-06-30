@@ -35,7 +35,7 @@
 </section><!--//features-->
 
 
-<!-- ******FAQ****** --> 
+<!-- ******Recent Posts****** --> 
     <section id="faq" class="faq section">
         <div class="container">
             <div class="row">
@@ -44,8 +44,14 @@
                   <% @evenPosts.each do |ep| %>
                     
                     <div class="item">
-                        <h3 class="question"><i class="fa fa-<%= ep.fonticon %>"></i><%= link_to ep.title, post_path(ep) %></h3>
-                        <p class="answer"><%= simple_format ep.body %></p>
+                      <h3 class="question"><span class="icon_small center"><i class="fa fa-<%= ep.fonticon %>"></i></span><%= link_to ep.title, post_path(ep) %>
+                      <span class="small pull-right"><%= ep.updated_at.strftime("%B %d, %Y") %></span>
+                      </h3>
+                      <% if ep.body.length <= 1000 %>
+                        <span class="answer"><%= ep.body.html_safe %></span>
+                      <% else %>
+                        <span class="answer"><%= ep.featuretext.html_safe %></span>
+                        <% end %>
                     </div><!--//item-->
                   <% end -%>
 
@@ -54,8 +60,15 @@
                 <div class="faq-col col-md-6 col-sm-6 col-xs-12">
                   <% @oddPosts.each do |op| %>
                     <div class="item card_body">
-                        <h3 class="question card_title"><i class="fa fa-<%= op.fonticon %>"></i><%= link_to op.title, post_path(op) %></h3>
-                        <span class="answer"><%= op.body.html_safe %></span>
+                        <h3 class="question card_title"><span class="icon_small center"><i class="fa fa-<%= op.fonticon %>"></i></span><%= link_to op.title, post_path(op) %>
+                        <span class="small pull-right"><%= op.updated_at.strftime("%B %d, %Y") %></span>
+                        </h3>
+                        <% if op.body.length <= 1000 %>
+                          <span class="answer"><%= op.body.html_safe %></span>
+                        <% else %>
+                          <span class="answer"><%= op.featuretext.html_safe %></span>
+                        <% end %>
+                        
                     </div><!--//item-->
                   <% end -%>
                 </div><!--//faq-col-->
@@ -65,7 +78,6 @@
             </div><!--//row-->
             <div class="more text-center">
                 <h4 class="title"><%= link_to "All Posts", posts_path %></h4>
-                <%= @latestPost.id %>
                 <a class="btn btn-lg btn-theme scrollto" href="#contact">Get in touch<i class="fa fa-arrow-circle-o-down"></i></a>
             </div>
         </div><!--//container-->

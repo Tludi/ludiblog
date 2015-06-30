@@ -1,5 +1,5 @@
 <div class="side_links">
-  <%= link_to "Latest_post", posts_path %></br>
+  <%= link_to "Latest_post", post_path(@current_public_post) %></br>
   
   
 
@@ -18,8 +18,18 @@
 <% end -%>
 <hr>
 <% @categories.each do |c| %>
-  <h3><%= c.name %> <span class="badge"><%= c.posts.count %></span></h3>
-  <% c.posts.each do |category_post| %>
-    <p><%= link_to category_post.title, post_path(category_post) %></p>
-  <% end -%>
+  <div class="category">
+    <h3>
+      <span class="icon_small center">
+        <i class="fa fa-<%= c.fonticon %>"></i>
+      </span>
+        <%= c.name %> 
+        <span class="badge">
+          <%= c.posts.count %>
+        </span>
+    </h3>
+    <% c.posts.each do |category_post| %>
+      <p><%= link_to category_post.title, post_path(category_post) %></p>
+    <% end -%>
+  </div>
 <% end -%>

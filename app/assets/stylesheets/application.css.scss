@@ -52,6 +52,10 @@ a {
     margin: 0 auto -50px; /* same as the footer */
 }
 
+.category {
+  font-size: 1em;
+}
+
 .category-box{
   border: solid 1px #e3e3e3;
   margin-right: 5px;
@@ -63,6 +67,10 @@ a {
 
 .dablue {
   color: blue;
+}
+
+.baseGreen {
+  color:#7bcaab;
 }
 
 .center {
@@ -317,4 +325,8 @@ h2.card_title a, .card_title{
 
 .white-bg {
   background-color: #fff;
+}
+
+.title a {
+  color: #ccc;
 }
