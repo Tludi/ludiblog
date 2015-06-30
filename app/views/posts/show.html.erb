@@ -5,12 +5,12 @@
     <div class="col-sm-8">
 
       <div class="blog-header">
-        <h1 class="blog-title baseGreen">
+        <h2 class="blog-title baseGreen">
           <span class="icon">
-            <i class="fa fa-<%= @post.fonticon %>"></i>
+            <i class="fa fa-<%= @post.category.fonticon %>"></i>
           </span>
           <%= @post.category.name %>
-        </h1>
+        </h2>
         <!-- <p class="lead blog-description">The official example template of creating a blog with Bootstrap.</p> -->
       </div>
 
@@ -18,29 +18,30 @@
         <div class="post card_post_wrapper">
           <div class="card_post">
             <div class="card_body">
-              <h2 class="card_title"><%= @post.title %>
+              <h3 class="card_title"><%= @post.title %>
                 <% unless @post.status == 0  %>
                   <span id="small"> (Private Post)</span>
                 <% end -%>
-              </h2>
-              <hr>
+              </h3>
+              <p class="small"><%= @post.updated_at.strftime("%B %d, %Y") %></p>
               <span class="small">
                 <% if session[:user_id] %>
                   <%= link_to ' Edit ', edit_post_path(@post)  %>
                   <%= link_to '| Delete', @post, :confirm => 'Are you sure?', :method => :delete %>
                 <% end -%>
               </span>
+              <hr>
          
-              <p class="small"><%= @post.updated_at.strftime("%B %d, %Y")
-        %></p>
               <%= @post.body.html_safe %>
 
-              <% if session[:user_id] %>
-                <%= link_to ' Edit ', edit_post_path(@post)  %>
-                <%= link_to '| Delete', @post, :confirm => 'Are you sure?', :method => :delete %>
-              <% end -%>
               <br />
               <hr />
+              <span class="small">
+                <% if session[:user_id] %>
+                  <%= link_to ' Edit ', edit_post_path(@post)  %>
+                  <%= link_to '| Delete', @post, :confirm => 'Are you sure?', :method => :delete %>
+                <% end -%>
+              </span>
             </div>
           </div>
         </div>

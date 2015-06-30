@@ -849,16 +849,16 @@ select {
 .how .video-container {
   margin-top: 50px;
 }
-/* ======= FAQ Section ======= */
-.faq {
+/* ======= recent Section ======= */
+.recent {
   /*padding: 80px 0;*/
 }
-.faq .title {
+.recent .title {
   margin-bottom: 60px;
   padding: 15px 0;
   background-color: #56BC94;
 }
-.faq .item {
+.recent .item {
   padding: 30px;
   background: #f5f5f5;
   margin-bottom: 30px;
@@ -872,26 +872,31 @@ select {
   background-clip: padding-box;
   border-bottom: 3px solid #c4e7d9;
 }
-.faq .item .question {
+.recent .item .question {
   margin-top: 0;
   font-size: 18px;
   margin-bottom: 15px;
 }
-.faq .item .question .fa {
+.recent .item .question .fa {
   margin-right: 10px;
-  padding-top: 4px;
+  /*padding-top: 4px;*/
+  /*color: #7bcaab;*/
+}
+
+.category h5 span.catName {
+  /*margin-right: 5px;*/
+  /*padding-top: 4px;*/
+  padding: 0 5px;
+  /*color: #7bcaab;*/
+  font-size: 20px;
+  vertical-align: middle;
+}
+
+.fa-circle {
   color: #7bcaab;
 }
 
-.category h3 .icon_small .fa {
-  margin-right: 5px;
-  padding-top: 4px;
-  /*padding-left: 1px;*/
-  color: #7bcaab;
-  font-size: .8em;
-}
-
-.icon_small i {
+/*.icon_small i {
   position: relative;
   width: 30px;
   height: 30px;
@@ -906,31 +911,32 @@ select {
   background-clip: padding-box;
   /*display: table;*/
   /*margin: 0 auto;*/
-  -webkit-transition: -webkit-transform ease-out 0.2s, background 0.3s;
-  -moz-transition: -moz-transform ease-out 0.2s, background 0.3s;
-  transition: transform ease-out 0.2s, background 0.3s;
-}
+  /*-webkit-transition: -webkit-transform ease-out 0.2s, background 0.3s;*/
+  /*-moz-transition: -moz-transform ease-out 0.2s, background 0.3s;*/
+  /*transition: transform ease-out 0.2s, background 0.3s;*/
+/*}*/
 
 
-.faq .item .answer {
+.recent .item .answer {
   color: #777777;
   font-weight: 300;
 }
-.faq .more {
+.recent .more {
   margin-top: 30px;
 }
-.faq .more .title {
+.recent .more .title {
   margin-bottom: 15px;
   color: #999999;
   font-size: 18px;
 }
-.faq .more .btn {
+.recent .more .btn {
   font-size: 18px;
   padding-left: 30px;
 }
-.faq .more .btn .fa {
+.recent .more .btn .fa {
   margin-left: 5px;
 }
+
 /* ======= Story Section ======= */
 .story {
   background-color: #56bc94;
