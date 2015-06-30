@@ -1,13 +1,13 @@
 Rails.application.routes.draw do
+  root :to => "home#index"
   mount Ckeditor::Engine => '/ckeditor'
-  get 'home/index'
+  # get 'home/index'
 
   resources :categories
   resources :posts
   resources :sessions
   resources :users
  
-  root :to => "home#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
