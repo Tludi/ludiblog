@@ -1,4 +1,5 @@
-<%= form_for(@post) do |f| %>
+<div class="container offset-header">
+  <%= form_for(@post) do |f| %>
   <% if @post.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
@@ -21,7 +22,7 @@
   </div>
   <div class="field">
     <%= f.label :feature_text %><br>
-    <%= f.cktext_area :featuretext, :size => "100x20" %>
+    <%= f.cktext_area :featuretext, :cols => 60, :ckeditor => {:toolbar => 'mini'} %>
   </div>
   <div class="field">
     <%= f.label :font_icon %><br>
@@ -45,3 +46,4 @@
     <%= f.submit %>
   </div>
 <% end %>
+</div>
