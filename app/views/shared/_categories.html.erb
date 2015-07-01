@@ -7,7 +7,9 @@
     <%= link_to 'New Post', new_post_path %></p>
     <%= link_to 'Private Posts', "#" %>
   <% end -%>
-  <%= link_to "Latest_post", post_path(@current_public_post) %></br>
+  <% if @current_public_post %>
+    <%= link_to "Latest_post", post_path(@current_public_post) %></br>
+  <% end %>
 </div>
 
 <h3>Categories  
