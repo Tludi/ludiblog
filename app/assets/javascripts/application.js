@@ -15,6 +15,4 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require ckeditor/init
-//= require highlight.pack
-//= require jquery.flexslider
 //= require_tree .

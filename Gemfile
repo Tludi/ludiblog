@@ -27,11 +27,12 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'sprockets-rails'
 gem 'ckeditor'
 gem 'paperclip'
+gem 'simple_form'
 
 # the following gems were added for the home theme
 gem 'font-awesome-rails'
 gem "animate-rails"
-gem 'flexslider'
+# gem 'flexslider'
 # gem 'gist-embed-rails'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
