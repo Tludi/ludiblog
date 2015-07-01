@@ -40,30 +40,6 @@
         <div class="container">
             <div class="row">
                 <h2 class="title text-center has-pattern">Recent Posts</h2>
-                <div class="faq-col col-md-6 col-sm-6 col-xs-12">
-                  <% @evenPosts.each do |ep| %>
-                    
-                    <div class="item">
-                      <h3 class="question">
-                        <span class="fa-stack fa">
-                          <i class="fa fa-circle fa-stack-2x"></i>
-                          <i class="fa fa-<%= ep.category.fonticon %> fa-stack-1x fa-inverse"></i>
-                        </span>
-                        
-                        <%= link_to ep.title, post_path(ep) %>
-                        <span class="small pull-right">
-                          <%= ep.updated_at.strftime("%B %d, %Y") %>
-                        </span>
-                      </h3>
-
-                      <% if ep.body.length <= 1000 %>
-                        <span class="answer"><%= ep.body.html_safe %></span>
-                      <% else %>
-                        <span class="answer"><%= ep.featuretext.html_safe %></span>
-                        <% end %>
-                    </div><!--//item-->
-                  <% end -%>
-                </div><!--//recent-col-->
 
                 <div class="faq-col col-md-6 col-sm-6 col-xs-12">
                   <% @oddPosts.each do |op| %>
@@ -89,6 +65,30 @@
                   <% end -%>
                 </div><!--//faq-col-->
 
+                <div class="faq-col col-md-6 col-sm-6 col-xs-12">
+                  <% @evenPosts.each do |ep| %>
+                    
+                    <div class="item">
+                      <h3 class="question">
+                        <span class="fa-stack fa">
+                          <i class="fa fa-circle fa-stack-2x"></i>
+                          <i class="fa fa-<%= ep.category.fonticon %> fa-stack-1x fa-inverse"></i>
+                        </span>
+                        
+                        <%= link_to ep.title, post_path(ep) %>
+                        <span class="small pull-right">
+                          <%= ep.updated_at.strftime("%B %d, %Y") %>
+                        </span>
+                      </h3>
+
+                      <% if ep.body.length <= 1000 %>
+                        <span class="answer"><%= ep.body.html_safe %></span>
+                      <% else %>
+                        <span class="answer"><%= ep.featuretext.html_safe %></span>
+                        <% end %>
+                    </div><!--//item-->
+                  <% end -%>
+                </div><!--//recent-col-->
 
 
             </div><!--//row-->
