@@ -1,3 +1,4 @@
+<div class="container offset-header">
 <%= form_for(@user) do |f| %>
   <% if @user.errors.any? %>
     <div id="error_explanation">
@@ -31,3 +32,4 @@
     <%= f.submit (@user.new_record? ? "Sign up" : "Update") %>
   </div>
 <% end %>
+</div>
