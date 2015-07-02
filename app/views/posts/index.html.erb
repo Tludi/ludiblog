@@ -29,7 +29,7 @@
              
                 <p class="small"><%= p.created_at.strftime("%B %d, %Y")
             %></p>
-                <%= simple_format p.body %>
+                <%= markdown(p.body) %>
 
                 <% if session[:user_id] %>
                   <%= link_to ' Edit ', edit_post_path(p)  %>
