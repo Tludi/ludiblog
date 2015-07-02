@@ -29,7 +29,7 @@ gem 'sprockets-rails'
 gem 'paperclip'
 gem 'simple_form'
 gem 'redcarpet', '~> 3.3.0'
-
+gem 'rails_12factor', group: :production
 
 # the following gems were added for the home theme
 gem 'font-awesome-rails'
