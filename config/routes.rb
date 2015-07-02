@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root :to => "home#index"
-  mount Ckeditor::Engine => '/ckeditor'
+  # mount Ckeditor::Engine => '/ckeditor'
   # get 'home/index'
 
   resources :categories

@@ -32,7 +32,7 @@
               </span>
               <hr>
          
-              <%= @post.body.html_safe %>
+              <%= markdown(@post.body) %>
 
               <br />
               <hr />

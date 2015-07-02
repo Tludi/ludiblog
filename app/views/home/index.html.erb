@@ -56,7 +56,7 @@
                         </h3>
 
                         <% if op.body.length <= 1000 %>
-                          <span class="answer"><%= op.body.html_safe %></span>
+                          <span class="answer"><%= markdown(op.body) %></span>
                         <% else %>
                           <span class="answer"><%= op.featuretext.html_safe %></span>
                         <% end %>
@@ -82,7 +82,7 @@
                       </h3>
 
                       <% if ep.body.length <= 1000 %>
-                        <span class="answer"><%= ep.body.html_safe %></span>
+                        <span class="answer"><%= markdown(ep.body) %></span>
                       <% else %>
                         <span class="answer"><%= ep.featuretext.html_safe %></span>
                         <% end %>

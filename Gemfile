@@ -25,9 +25,11 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'sprockets-rails'
-gem 'ckeditor'
+# gem 'ckeditor'
 gem 'paperclip'
 gem 'simple_form'
+gem 'redcarpet', '~> 3.3.0'
+
 
 # the following gems were added for the home theme
 gem 'font-awesome-rails'
