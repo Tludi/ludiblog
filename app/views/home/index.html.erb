@@ -18,13 +18,14 @@
         <h2 class="title text-center sr-only">Features</h2>
         <div class="item col-md-3 col-sm-6 col-xs-12 text-center">
 
-          <div class="icon">
+          <div class="icon feature_icon">
             <i class="fa fa-<%= p.category.fonticon %>"></i>                
           </div><!--//icon-->
-
-          <div class="content">
+          <br>
+          <div class="content feature_border card_post">
             <h3 class="title"><%= link_to p.title, post_path(p) %></h3>
-            <%= simple_format p.featuretext %>  
+            <hr>
+            <%= markdown(p.featuretext) %>  
             <button class="modal-trigger btn btn-link" data-toggle="modal" data-target="#feature-modal-1"><%= link_to "Read more", post_path(p) %></button>
           </div><!--//content-->               
         </div><!--//item-->
@@ -67,9 +68,9 @@
                         <% if op.body.length <= 1000 %>
                           <span class="answer"><%= markdown(op.body) %></span>
                         <% else %>
-                          <span class="answer"><%= op.featuretext.html_safe %></span>
+                          <span class="answer"><%= markdown(op.featuretext) %></span>
                         <% end %>
-                        
+                        <button class="modal-trigger btn btn-link" data-toggle="modal" data-target="#feature-modal-1"><%= link_to "Read more", post_path(op) %></button>
                     </div><!--//item-->
                   <% end -%>
                 </div><!--//faq-col-->
@@ -93,8 +94,9 @@
                       <% if ep.body.length <= 1000 %>
                         <span class="answer"><%= markdown(ep.body) %></span>
                       <% else %>
-                        <span class="answer"><%= ep.featuretext.html_safe %></span>
-                        <% end %>
+                        <span class="answer"><%= markdown(ep.featuretext) %></span>
+                      <% end %>
+                      <button class="modal-trigger btn btn-link" data-toggle="modal" data-target="#feature-modal-1"><%= link_to "Read more", post_path(ep) %></button>
                     </div><!--//item-->
                   <% end -%>
                 </div><!--//recent-col-->
