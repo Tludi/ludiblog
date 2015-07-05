@@ -127,23 +127,23 @@ select {
 }
 ::-webkit-input-placeholder {
   /* WebKit browsers */
-  color: #999;
-  text-transform: uppercase;
+  color: green;
+  /*text-transform: uppercase;*/
 }
 :-moz-placeholder {
   /* Mozilla Firefox 4 to 18 */
   color: #999;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
 }
 ::-moz-placeholder {
   /* Mozilla Firefox 19+ */
   color: #999;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
 }
 :-ms-input-placeholder {
   /* Internet Explorer 10+ */
   color: #999;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
 }
 .offset-header {
   padding-top: 90px;
@@ -279,13 +279,13 @@ select {
 .header h1.logo {
   margin-top: 0;
   margin-bottom: 0;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   font-weight: bold;
   font-size: 28px;
   max-height: 50px;
 }
 .header h1.logo a {
-  color: #444444;
+  color: green;
   -webkit-transition: none;
   -moz-transition: none;
   -ms-transition: none;
