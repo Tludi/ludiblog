@@ -36,6 +36,7 @@ a img {
 
 a {
   color: #0000FF;
+  color: #5981FD;
 }
 
 .clear {
@@ -86,13 +87,6 @@ pre {
   background-color: #eee;
   font-family: Ubuntu, verdana, arial, helvetica, sans-serif;
     line-height: 12px;
-}
-
-
-a {
-  color:#999;
-  /*text-decoration:none;*/
-  
 }
 
 a:hover { color: #333; background-color:#fff; }
@@ -326,6 +320,7 @@ h2.card_title a, .card_title{
   background-color: #fff;
 }
 
-.title a {
+.title a, a.title {
   color: #ccc;
+  color: orange;
 }

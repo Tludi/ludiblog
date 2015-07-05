@@ -1,6 +1,7 @@
 class HomeController < ApplicationController
 
   def index
+    @home = true
     @categories = Category.all
     @posts = Post.all.limit(4)
     @allPosts = Post.order(:updated_at => :desc)

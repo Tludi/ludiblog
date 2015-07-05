@@ -20,11 +20,11 @@ jQuery(document).ready(function($) {
 	});
 	
     /* ======= Flexslider ======= */
-    $('.flexslider').flexslider({
-        animation: "fade",
-        touch: true,
-        directionNav: false
-    });
+    // $('.flexslider').flexslider({
+    //     animation: "fade",
+    //     touch: true,
+    //     directionNav: false
+    // });
 
     /* ======= jQuery Placeholder ======= */
     // $('input, textarea').placeholder();
