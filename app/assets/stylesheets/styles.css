@@ -10,6 +10,9 @@ body {
   font-family: 'Lato', arial, sans-serif;
   color: #444444;
 }
+li {
+  color: #5981fd;
+}
 a {
   color: #56bc94;
   -webkit-transition: all 0.4s ease-in-out;

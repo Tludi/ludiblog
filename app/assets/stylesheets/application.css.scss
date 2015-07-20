@@ -282,6 +282,17 @@ p#notice {
   color:#aaa;
 }
 
+.card_body p {
+  font-size: 1.25em;
+  line-height: 1.5em;
+  font-weight: 300;
+}
+
+.card_body pre {
+  font-size: 1.05em;
+  line-height: 1.5em;
+  font-weight: 300;
+}
 
 .card_post_wrapper{
   /*background:#777;*/
