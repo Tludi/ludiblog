@@ -154,8 +154,9 @@ select {
 
 .has-pattern {
   background-image: url('pattern-1.png');
-  background-repeat: repeat;
+  /*background-repeat: repeat;*/
   background-position: left top;
+  /*background-size: 10px;*/
 }
 .delayp1 {
   animation-delay: .1s;
@@ -286,6 +287,7 @@ select {
 }
 .header h1.logo a {
   color: green;
+  color: #eee;
   -webkit-transition: none;
   -moz-transition: none;
   -ms-transition: none;

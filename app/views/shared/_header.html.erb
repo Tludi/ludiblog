@@ -4,7 +4,7 @@
           <h1 class="logo pull-left">
               <a class="scrollto" href="#promo">
                   <%= link_to image_tag("logo.png", class: "logo-image"), root_path %>
-                  <!-- <span class="logo-title"><%= link_to "tim ludi", root_path %></span> -->
+                  <span class="logo-title"><%= link_to "diligent agility", root_path %></span>
               </a>
           </h1><!--//logo-->              
           <nav id="main-nav" class="main-nav navbar-right" role="navigation">
@@ -23,7 +23,11 @@
                     <!-- <li class="active nav-item sr-only"><a class="scrollto" href="#promo">Home</a></li> -->
                     <li class="active nav-item"><%= link_to "Home", root_path %></li>
                     <li class="nav-item"><%= link_to "Posts", posts_path %></li>
-                    <li class="nav-item"><%= link_to "Login", login_path %> </li>
+                    <% if logged_in? %>
+                      <li class="nav-item"><%= link_to "Logout", logout_path %> </li>
+                    <% else %>
+                      <li class="nav-item"><%= link_to "Login", login_path %> </li>
+                    <% end -%>
                   </ul><!--//nav-->
               </div><!--//navabr-collapse-->
           </nav><!--//main-nav-->           

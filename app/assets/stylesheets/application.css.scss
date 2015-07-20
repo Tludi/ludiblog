@@ -27,7 +27,14 @@ body {
   /*background-color: #4B7399;*/
   /*background-color: #FBF4E1;*/
   font-family: Verdana, Helvetica, Arial;
-  font-size: 14px;
+  font-size: 16px;
+}
+
+body, p, ol, ul, td {
+  font-family: Ubuntu, verdana, arial, helvetica, sans-serif;
+  font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  /*line-height: 20px;*/
 }
 
 a img {
@@ -78,10 +85,6 @@ a {
 }
 
 
-body, p, ol, ul, td {
-  font-family: Ubuntu, verdana, arial, helvetica, sans-serif;
-  /*line-height: 20px;*/
-}
 
 pre {
   background-color: #eee;
