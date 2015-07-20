@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_filter :check_if_logged_in
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   # GET /users
@@ -71,5 +72,19 @@ class UsersController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
       params.require(:user).permit(:name, :email, :password, :password_confirmation)
+    end
+
+    def check_if_logged_in
+      unless logged_in?
+        render_404 
+      end
+    end
+
+    def render_404
+      respond_to do |format|
+        format.html { render :file => "#{Rails.root}/public/404", :layout => false, :status => :not_found }
+        format.xml  { head :not_found }
+        format.any  { head :not_found }
+      end
     end
 end

@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_filter :check_if_logged_in, except: [:index, :show]
   before_action :set_post, only: [:show, :edit, :update, :destroy]
   before_action :set_categories
 
@@ -87,4 +88,19 @@ class PostsController < ApplicationController
     def post_params
       params.require(:post).permit(:title, :body, :category_id, :user_id, :status, :featuretext, :fonticon, :postimageurl)
     end
+
+    def check_if_logged_in
+      unless logged_in?
+        render_404 
+      end
+    end
+
+    def render_404
+      respond_to do |format|
+        format.html { render :file => "#{Rails.root}/public/404", :layout => false, :status => :not_found }
+        format.xml  { head :not_found }
+        format.any  { head :not_found }
+      end
+    end
+
 end
