@@ -6,6 +6,10 @@
  * Twitter: @3rdwave_themes
 */
 /* ======= Base ======= */
+.blue {
+  color: #5981FD;
+}
+
 body {
   font-family: 'Lato', arial, sans-serif;
   color: #444444;
@@ -796,7 +800,7 @@ select {
 }
 .features .content .title {
   color: #56bc94;
-  font-size: 18px;
+  font-size: 28px;
   margin-top: 0;
 }
 .features .content p {

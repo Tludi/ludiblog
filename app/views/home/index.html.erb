@@ -14,7 +14,7 @@
 <section id="features" class="features section">
   <div class="container">
     <div class="row">
-      <% @categories.limit(4).each do |c| %>
+      <% @categories.limit(4).order('created_at ASC').each do |c| %>
         <h2 class="title text-center sr-only">Features</h2>
         <div class="item col-md-3 col-sm-6 col-xs-12 text-center">
 
@@ -23,14 +23,20 @@
           </div><!--//icon-->
           <br>
           <div class="content feature_border card_post">
-            <h3 class="title"><%= link_to c.name %></h3>
+            <h1 class="title"><%= link_to c.name %></h1>
             <hr>
             <div class="text-left">
-            <% c.posts.limit(4).order('updated_at DESC').each do |p| %>
+              <% c.posts.limit(4).order('updated_at DESC').each do |p| %>
 
-                <p><%= link_to p.title, post_path(p) %></p>
+                <p>
+                  <!-- <span class="fa-stack fa"> -->
+                    <!-- <i class="fa fa-circle fa-stack-2x"></i> -->
+                    <i class="fa fa-<%= c.fonticon %> blue">  </i>
+                  <!-- </span> -->
+                  <%= link_to p.title, post_path(p) %>
+                </p>
 
-            <% end -%>
+              <% end -%>
             </div>
             <button class="modal-trigger btn btn-link" data-toggle="modal" data-target="#feature-modal-1"><%= link_to "More", posts_path %></button>
           </div><!--//content-->               
@@ -67,10 +73,10 @@
                             <i class="fa fa-<%= op.category.fonticon %> fa-stack-1x fa-inverse"></i>
                           </span>
 
-                          <%= link_to op.title, post_path(op), class: "title"%>
                           <span class="small pull-right">
                             <%= op.updated_at.strftime("%B %d, %Y") %>
                           </span>
+                          <%= link_to op.title, post_path(op), class: "title"%>
                         </h3>
 
                         <% if op.body.length <= 1000 %>
