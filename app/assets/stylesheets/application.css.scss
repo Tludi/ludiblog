@@ -89,7 +89,7 @@ a {
 pre {
   background-color: #eee;
   font-family: Ubuntu, verdana, arial, helvetica, sans-serif;
-    line-height: 12px;
+  line-height: 10px;
 }
 
 a:hover { color: #333; background-color:#fff; }
@@ -283,12 +283,12 @@ p#notice {
 }
 
 .card_body p {
-  font-size: 1.25em;
+  font-size: 1.20em;
   line-height: 1.5em;
   font-weight: 300;
 }
 
-.card_body pre {
+pre code {
   font-size: 1.05em;
   line-height: 1.5em;
   font-weight: 300;
